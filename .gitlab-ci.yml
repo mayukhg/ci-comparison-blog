@@ -38,7 +38,7 @@ aws-deploy:
   before_script:
     - pip install awsebcli
   script:
-    - echo 'eb --version'
+    - echo eb --version
     - mkdir ~/.aws/
     - touch ~/.aws/credentials
     - printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_ID" "$AWS_SECRET_KEY" >> ~/.aws/credentials
