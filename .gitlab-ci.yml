@@ -37,6 +37,7 @@ aws-deploy:
   stage: aws-deploy
   before_script:
     - git clone https://github.com/aws/aws-elastic-beanstalk-cli-setup.git
+    - python aws-elastic-beanstalk-cli-setup/scripts/python_installer
     - python aws-elastic-beanstalk-cli-setup/scripts/ebcli_installer.py --version 3.14.13
   script:
     - eb --version
